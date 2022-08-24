@@ -1,11 +1,13 @@
 import React from "react";
-import "./styles.css";
+import "./Weather.css";
+import "./Styles.css";
+import "./Footer.css";
 
 export default function Footer() {
   return (
     <div className="footer">
       <footer>
-        <a href="https://github.com/MMLaw95/wx-page-javascript" target="_blank">
+        <a href="https://github.com/MMLaw95/wx-app-react" target="_blank">
           Open-source
         </a>
         <span className="by-footer">by</span>
