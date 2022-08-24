@@ -7,7 +7,11 @@ export default function Footer() {
   return (
     <div className="footer">
       <footer>
-        <a href="https://github.com/MMLaw95/wx-app-react" target="_blank">
+        <a
+          href="https://github.com/MMLaw95/wx-app-react"
+          target="_blank"
+          rel="noreferrer"
+        >
           Open-source
         </a>
         <span className="by-footer">by</span>
