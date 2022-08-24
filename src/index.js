@@ -5,7 +5,15 @@ import Weather from "./Weather";
 import Footer from "./Footer";
 import "./Styles.css";
 import "./Footer.css";
-import App from "./App";
+
+function App() {
+  return (
+    <div className="App">
+      <Weather />
+      <Footer />
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
