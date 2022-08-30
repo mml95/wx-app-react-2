@@ -1,0 +1,42 @@
+.WeatherTemperature .currentTemp {
+  color: #000;
+  font-size: 95px;
+  font-weight: 600;
+  line-height: 0.8;
+  text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
+    -1px -1px 0 #fff;
+}
+
+.WeatherTempature .units {
+  position: relative;
+  top: -55px;
+}
+
+.WeatherTempature .weather-temperature .active {
+  cursor: default;
+  color: black;
+  text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
+    -1px -1px 0 #fff;
+}
+
+.WeatherTempature .weather-temperature a {
+  color: white;
+}
+
+.WeatherTempature .weather-temperature a:hover {
+  text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
+    -1px -1px 0 #fff;
+  color: #000;
+}
+
+.WeatherTempature .fahrenheitLink:inactive {
+  color: #48484a;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
+
+.WeatherTempature .celsiusLink:inactive {
+  color: #48484a;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
