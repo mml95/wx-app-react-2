@@ -5,6 +5,7 @@ footer a {
   margin: 30px;
   color: #7f3d2e;
   padding: 5px;
+  text-decoration: none;
 }
 
 footer a:hover {
