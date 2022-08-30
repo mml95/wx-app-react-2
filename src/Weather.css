@@ -135,10 +135,6 @@
     -1px -1px 0 #fff;
 }
 
-.Weather .weather-description {
-  text-transform: capitalize;
-}
-
 .Weather .press-two {
   background: #000;
   color: white;
