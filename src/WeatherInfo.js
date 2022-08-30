@@ -8,12 +8,19 @@ export default function WeatherInfo(props) {
         <div className="row px-5">
           <div className="col-md detail-block text-center">
             <div className="star-city">{props.data.city}</div>
+
             <img
+              src={props.data.iconUrl}
+              alt={props.data.description}
+              width="220"
+              className="d-block current-emoji"
+            />
+            {/* <img
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt=""
               className="d-block current-emoji"
               width="220"
-            />
+            /> */}
           </div>
 
           <div className="col-md text-center">
