@@ -80,13 +80,13 @@ export default function Weather() {
                 </div>
                 <div className="col-2 p-0">
                   <input
-                    className="d-none d-md-block form-control btn btn-light shadow-sm rounded-0 press-one"
+                    className="d-none d-md-block form-control btn btn-light shadow-sm rounded-0 press-one w-100"
                     type="submit"
                     value="Search"
                   />
                   <button
                     type="submit"
-                    className="d-block d-md-none form-control btn btn-light shadow-sm rounded-0 mobile-search"
+                    className="d-block d-md-none form-control btn btn-light shadow-sm rounded-0 mobile-search w-100"
                   >
                     Find
                   </button>

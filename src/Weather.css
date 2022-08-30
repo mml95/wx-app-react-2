@@ -1,4 +1,4 @@
-ul.world-cities {
+.Weather ul.world-cities {
   text-align: center;
   margin-top: 8px;
   top: 3px;
@@ -7,12 +7,12 @@ ul.world-cities {
   position: relative;
 }
 
-.world-cities li {
+.Weather .world-cities li {
   display: inline;
   margin-left: 30px;
 }
 
-.world-cities li a {
+.Weather .world-cities li a {
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -20,80 +20,80 @@ ul.world-cities {
     -1px -1px 0 #fff;
 }
 
-.world-cities li a:hover {
+.Weather .world-cities li a:hover {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
   text-shadow: none;
 }
 
-form .form-control:focus {
+.Weather form .form-control:focus {
   border-color: #000;
 }
 
-.press-one {
+.Weather .press-one {
   background: #000;
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
-.press-one:hover {
+.Weather .press-one:hover {
   background: #48484a;
 }
 
-.mobile-search {
+.Weather .mobile-search {
   background: #000;
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
-.mobile-search:hover {
+.Weather .mobile-search:hover {
   background: #48484a;
 }
 
-a:link {
+.Weather a:link {
   text-decoration: none;
 }
 
-.units {
+.Weather .units {
   position: relative;
   top: -55px;
 }
 
-.weather-temperature .active {
+.Weather .weather-temperature .active {
   cursor: default;
   color: black;
   text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
     -1px -1px 0 #fff;
 }
 
-.weather-temperature a {
+.Weather .weather-temperature a {
   color: white;
 }
 
-.weather-temperature a:hover {
+.Weather .weather-temperature a:hover {
   text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
     -1px -1px 0 #fff;
   color: #000;
 }
 
-.fahrenheit-link:inactive {
+.Weather .fahrenheit-link:inactive {
   color: #48484a;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
 }
 
-.celsius-link:inactive {
+.Weather .celsius-link:inactive {
   color: #48484a;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
 }
 
-.detail-block {
+.Weather .detail-block {
   text-align: end;
 }
 
-.star-city {
+.Weather .star-city {
   font-size: 58px;
   position: relative;
   top: 18px;
@@ -103,14 +103,14 @@ a:link {
     -1px -1px 0 #fff;
 }
 
-img.current-emoji {
+.Weather img.current-emoji {
   margin: 0 auto;
   text-align: center;
   position: relative;
   bottom: 0px;
 }
 
-.current-focus-details {
+.Weather .current-focus-details {
   display: block;
   font-weight: 400;
   color: #fff;
@@ -118,7 +118,7 @@ img.current-emoji {
   top: 35px;
 }
 
-ul.current-details {
+.Weather ul.current-details {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -126,7 +126,7 @@ ul.current-details {
   line-height: 1.25;
 }
 
-.current-temp {
+.Weather .current-temp {
   color: #000;
   font-size: 95px;
   font-weight: 600;
@@ -135,56 +135,37 @@ ul.current-details {
     -1px -1px 0 #fff;
 }
 
-.weather-description {
+.Weather .weather-description {
   text-transform: capitalize;
 }
 
-.press-two {
+.Weather .press-two {
   background: #000;
   color: white;
   transition: all 0.2s ease-in-out;
   margin: 7px 0 0;
 }
 
-.press-two:hover {
+.Weather .press-two:hover {
   background: #48484a;
 }
 
-.group-days {
+.Weather .group-days {
   position: relative;
   bottom: 22px;
 }
 
-.list-group {
+.Weather .list-group {
   box-shadow: 0px 15px 39px -7px #000000;
 }
 
-.list-group-item {
+.Weather .list-group-item {
   color: #000;
   background-color: #ffffff85;
 }
 
-.lows {
+.Weather .lows {
   opacity: 0.5;
-}
-
-footer,
-footer a {
-  text-align: center;
-  font-size: 14px;
-  margin: 30px;
-  color: #7f3d2e;
-  padding: 5px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: #7f3d2e;
-}
-
-.by-footer {
-  margin: -31px;
-  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -219,10 +200,6 @@ footer a:hover {
     text-align: center;
     position: relative;
     top: -64px;
-  }
-
-  .by-footer {
-    color: #e5e5e5;
   }
 
   .oldSearchValue {
