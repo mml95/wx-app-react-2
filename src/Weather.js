@@ -1,19 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+// import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
-// import ReactDOM from "react-dom";
-// import Cities from "./Cities";
-// import Icon from "./Icon";
-// import Date from "./Date";
-// import Description from "./Description";
-// import Feels from "./Feels";
-// import forecast from "./Forecast";
-// import Humidity from "./Humidity";
-// import Temperature from "./Temperature";
-// import Search from "./Search";
-// import Wind from "./Wind";
-// import "./Styles.css";
-// import "./Footer.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -22,7 +11,7 @@ export default function Weather(props) {
 
     setWeatherData({
       ready: true,
-      date: "Wed July 24, 1985",
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       feelsLike: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
@@ -142,7 +131,9 @@ export default function Weather(props) {
                           </a>
                         </span>
                         <ul className="current-details">
-                          <li>{weatherData.date}</li>
+                          <li>
+                            <FormattedDate date={weatherData.date} />
+                          </li>
                           <li>Feels Like: {weatherData.feelsLike}°</li>
                           <li>Humidity: {weatherData.humidity}%</li>
                           <li>Wind: {weatherData.wind} mph</li>
