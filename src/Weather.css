@@ -1,3 +1,7 @@
+.Weather .form-control {
+  margin-top: 50px;
+}
+
 .Weather ul.world-cities {
   text-align: center;
   margin-top: 8px;

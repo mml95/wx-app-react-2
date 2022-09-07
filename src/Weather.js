@@ -43,7 +43,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="container">
           <div className="weather-app">
-            <header>
+            {/* <header>
               <div className="row">
                 <div className="col-md">
                   <ul className="world-cities">
@@ -75,7 +75,7 @@ export default function Weather(props) {
                   </ul>
                 </div>
               </div>
-            </header>
+            </header> */}
 
             <section>
               <form onSubmit={handleSubmit} className="float-left">
