@@ -8,6 +8,11 @@ export default function WeatherForecastDay(props) {
 
     return days[day];
   }
+
+  function forecastIcon() {
+    let icon = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
+    return `${icon}`;
+  }
   return (
     <div>
       <div className="WeatherForecast-day text-center">
@@ -16,12 +21,7 @@ export default function WeatherForecastDay(props) {
             <span className="forecast-day">{day()}</span>
           </li>
           <li className="list-group-item border-0" id="emoji-week">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt=""
-              className="current-emoji"
-              width="30"
-            />
+            <img src={forecastIcon()} alt="" width="40" />
           </li>
           <li className="list-group-item" id="high-low-week">
             <span className="highs" id="high-weekday">
