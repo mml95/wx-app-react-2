@@ -4,7 +4,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
-  let setWeatherData = useState({ ready: false });
+  let [weatherData, setWeatherData] = useState({ ready: false });
   // let city = useState(props.defaultCity);
   function handleResponse(response) {
     setWeatherData({
@@ -46,7 +46,7 @@ export default function WeatherInfo(props) {
 
   function currentLocation(event) {
     event.preventDefault();
-    navigator.geolocation.currentLocation(searchLocation);
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
   return (
