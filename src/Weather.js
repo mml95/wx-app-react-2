@@ -124,7 +124,7 @@ export default function Weather(props) {
                             <button
                               onClick={currentLocation}
                               className="btn btn-light rounded-0 press-two"
-                              type="click"
+                              type="button"
                             >
                               Current Location
                             </button>
