@@ -53,6 +53,7 @@ export default function Weather(props) {
   }
 
   if (weatherData.ready) {
+    console.log(weatherData);
     return (
       <div className="Weather">
         <div className="container">
@@ -92,11 +93,11 @@ export default function Weather(props) {
             <section>
               <div className="row px-5">
                 <div className="col-md detail-block text-center">
-                  <div className="star-city">{weatherData.data.city}</div>
+                  <div className="star-city">{weatherData.city}</div>
 
                   <img
-                    src={weatherData.data.iconUrl}
-                    alt={weatherData.data.description}
+                    src={weatherData.iconUrl}
+                    alt={weatherData.description}
                     width="220"
                     className="d-block current-emoji"
                   />
@@ -107,18 +108,18 @@ export default function Weather(props) {
                     <div className="clearfix weather-temperature">
                       <div className="float-right">
                         <WeatherTemperature
-                          fahrenheit={weatherData.data.temperature}
+                          fahrenheit={weatherData.temperature}
                         />
 
                         <ul className="current-details">
                           <li>
-                            <FormattedDate date={weatherData.data.date} />
+                            <FormattedDate date={weatherData.date} />
                           </li>
-                          <li>Feels Like: {weatherData.data.feelsLike}°</li>
-                          <li>Humidity: {weatherData.data.humidity}%</li>
-                          <li>Wind: {weatherData.data.wind} mph</li>
+                          <li>Feels Like: {weatherData.feelsLike}°</li>
+                          <li>Humidity: {weatherData.humidity}%</li>
+                          <li>Wind: {weatherData.wind} mph</li>
                           <li className="weather-description text-capitalize">
-                            {weatherData.data.description}
+                            {weatherData.description}
                           </li>
                           <li>
                             <button
