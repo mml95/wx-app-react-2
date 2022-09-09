@@ -21,21 +21,6 @@ export default function WeatherInfo(props) {
     });
   }
 
-  // function search() {
-  //   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
-  //   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  //   axios.get(apiUrl).then(handleResponse);
-  // }
-
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   search();
-  // }
-
-  // function handleCityChange(event) {
-  //   setCity(event.target.value);
-  // }
-
   function searchLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -62,12 +47,6 @@ export default function WeatherInfo(props) {
               width="220"
               className="d-block current-emoji"
             />
-            {/* <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt=""
-              className="d-block current-emoji"
-              width="220"
-            /> */}
           </div>
 
           <div className="col-md text-center">

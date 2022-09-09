@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 import "./Footer";
 
@@ -38,45 +39,24 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function searchLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiKey = `c95d60a1e3adbeb286133f1ebebc2579`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function currentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container">
           <div className="weather-app">
-            {/* <header>
-              <div className="row">
-                <div className="col-md">
-                  <ul className="world-cities">
-                    <li className="world-city">
-                      <a href="/" className="city-color">
-                        London
-                      </a>
-                    </li>
-                    <li className="world-city">
-                      <a href="/" className="city-color">
-                        Tokyo
-                      </a>
-                    </li>
-                    <li className="world-city">
-                      <a href="/" className="city-color">
-                        New York
-                      </a>
-                    </li>
-                    <li className="world-city">
-                      <a href="/" className="city-color">
-                        Reykjavik
-                      </a>
-                    </li>
-                    <li className="world-city">
-                      <a href="/" className="city-color d-none d-md-inline">
-                        Lagos
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </header> */}
-
             <section>
               <form onSubmit={handleSubmit} className="float-left">
                 <div className="row px-md-5">
@@ -109,9 +89,60 @@ export default function Weather(props) {
               </form>
             </section>
 
-            <WeatherInfo data={weatherData} />
-            <WeatherForecast coordinates={weatherData.coordinates} />
+            <section>
+              <div className="row px-5">
+                <div className="col-md detail-block text-center">
+                  <div className="star-city">{weatherData.data.city}</div>
+
+                  <img
+                    src={weatherData.data.iconUrl}
+                    alt={weatherData.data.description}
+                    width="220"
+                    className="d-block current-emoji"
+                  />
+                </div>
+
+                <div className="col-md text-center">
+                  <div className="current-focus-details">
+                    <div className="clearfix weather-temperature">
+                      <div className="float-right">
+                        <WeatherTemperature
+                          fahrenheit={weatherData.data.temperature}
+                        />
+
+                        <ul className="current-details">
+                          <li>
+                            <FormattedDate date={weatherData.data.date} />
+                          </li>
+                          <li>Feels Like: {weatherData.data.feelsLike}°</li>
+                          <li>Humidity: {weatherData.data.humidity}%</li>
+                          <li>Wind: {weatherData.data.wind} mph</li>
+                          <li className="weather-description text-capitalize">
+                            {weatherData.data.description}
+                          </li>
+                          <li>
+                            <button
+                              onClick={currentLocation}
+                              className="btn btn-light rounded-0 press-two"
+                              type="click"
+                            >
+                              Current Location
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div className="weather-forecast text-center"></div>
+            </section>
           </div>
+
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
