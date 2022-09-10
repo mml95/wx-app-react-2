@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="Footer">
       <footer>
         <a
           href="https://github.com/MMLaw95/wx-app-react"

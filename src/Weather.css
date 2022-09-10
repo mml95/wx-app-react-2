@@ -2,35 +2,6 @@
   margin-top: 50px;
 }
 
-.Weather ul.world-cities {
-  text-align: center;
-  margin-top: 8px;
-  top: 3px;
-  padding: 0;
-  list-style: none;
-  position: relative;
-}
-
-.Weather .world-cities li {
-  display: inline;
-  margin-left: 30px;
-}
-
-.Weather .world-cities li a {
-  color: black;
-  font-weight: 700;
-  text-decoration: none;
-  text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
-    -1px -1px 0 #fff;
-}
-
-.Weather .world-cities li a:hover {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  text-shadow: none;
-}
-
 .Weather form .form-control:focus {
   border-color: #000;
 }
