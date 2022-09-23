@@ -1,5 +1,5 @@
-footer,
-footer a {
+.Footer footer,
+.Footer footer a {
   text-align: center;
   font-size: 14px;
   margin: 30px;
@@ -8,17 +8,30 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover {
+.Footer footer a:hover {
   text-decoration: underline;
   color: #7f3d2e;
 }
 
-.by-footer {
+.Footer .by-footer {
   margin: -31px;
   color: #000;
 }
+
 @media (max-width: 768px) {
-  .by-footer {
+  .Footer .by-footer {
     color: #e5e5e5;
+  }
+
+  .Footer footer,
+  .Footer footer a {
+    /* margin: 30px; */
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    margin: 65px 30px 30px;
+    color: #7f3d2e;
+    padding: 5px;
   }
 }

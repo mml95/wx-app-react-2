@@ -138,3 +138,11 @@
 .Weather .lows {
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .Weather .current-focus-details {
+    text-align: center;
+    position: relative;
+    top: -64px;
+  }
+}
