@@ -13,7 +13,7 @@ export default function Footer() {
           Open-source
         </a>
         <span className="by-footer">by</span>
-        <a href="mailto:mlawry95@gmail.com">M.M. Lawry</a>
+        <a href="mailto:mlawry95@gmail.com">M.M.L.</a>
       </footer>
     </div>
   );
