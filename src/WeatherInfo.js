@@ -25,7 +25,7 @@ export default function WeatherInfo(props) {
   function searchLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    let apiKey = `c95d60a1e3adbeb286133f1ebebc2579`;
+    let apiKey = `b47fdf6445cd8b64ab889be77dbe56d4`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
