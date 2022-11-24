@@ -25,12 +25,10 @@
 
   .Footer footer,
   .Footer footer a {
-    /* margin: 30px; */
     text-align: center;
     font-size: 14px;
-    position: absolute;
     bottom: 20px;
-    margin: 65px 30px 30px;
+    margin: 943px 30px 30px;
     color: #7f3d2e;
     padding: 5px;
   }

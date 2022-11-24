@@ -57,9 +57,9 @@
     display: none;
   }
 
-  .Footer .by-footer {
+  /* .Footer .by-footer {
     color: #e5e5e5;
-  }
+  } */
 }
 
 @media (max-width: 576px) {
