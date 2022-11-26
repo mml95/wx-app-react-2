@@ -6,14 +6,14 @@ export default function Footer() {
     <div className="Footer">
       <footer>
         <a
-          href="https://github.com/MMLaw95/wx-app-react"
+          href="https://github.com/mml95/wx-app-react"
           target="_blank"
           rel="noreferrer"
         >
           Open-source
         </a>
         <span className="by-footer">by</span>
-        <a href="mailto:mlawry95@gmail.com">M.M.L.</a>
+        <a href="mailto:mml@mml95.dev">M.M.L.</a>
       </footer>
     </div>
   );
