@@ -5,6 +5,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 import "./App.css";
+// import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -95,6 +96,7 @@ export default function Weather(props) {
                 <div className="col-md detail-block text-center">
                   <div className="star-city">{weatherData.city}</div>
 
+                  {/* <WeatherInfo /> */}
                   <img
                     src={weatherData.iconUrl}
                     alt={weatherData.description}
