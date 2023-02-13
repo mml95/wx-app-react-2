@@ -61,7 +61,7 @@ export default function Weather(props) {
           <div className="weather-app">
             <section>
               <form onSubmit={handleSubmit} className="float-left">
-                <div className="row px-md-5">
+                <div className="row ps-0 px-2 px-md-5">
                   <div className="col-10">
                     <div className="search-bar">
                       <input
@@ -95,7 +95,6 @@ export default function Weather(props) {
               <div className="row px-5">
                 <div className="col-md detail-block text-center">
                   <div className="star-city">{weatherData.city}</div>
-
                   {/* <WeatherInfo /> */}
                   <img
                     src={weatherData.iconUrl}
@@ -112,7 +111,6 @@ export default function Weather(props) {
                         <WeatherTemperature
                           fahrenheit={weatherData.temperature}
                         />
-
                         <ul className="current-details">
                           <li>
                             <FormattedDate date={weatherData.date} />
