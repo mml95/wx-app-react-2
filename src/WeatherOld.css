@@ -78,21 +78,11 @@
     -1px -1px 0 #fff;
 }
 
-.Weather canvas {
-  margin: 41px auto;
+.Weather img.current-emoji {
+  margin: 0 auto;
   text-align: center;
   position: relative;
-  bottom: 8px;
-  height: 130px;
-  width: 130px;
-}
-
-.Weather #emoji-week canvas {
-  height: 30px;
-  width: 30px;
-  margin: 3px auto;
-  position: relative;
-  bottom: -4px;
+  bottom: 0px;
 }
 
 .Weather .current-focus-details {
@@ -158,9 +148,5 @@
 
   .Weather .list-group-item {
     background-color: #bab8b8;
-  }
-
-  .Weather canvas {
-    bottom: 21px;
   }
 }

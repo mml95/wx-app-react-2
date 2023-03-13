@@ -5,7 +5,6 @@ import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 import "./App.css";
-import WeatherIcon from "./WeatherIcon";
 // import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
@@ -22,7 +21,7 @@ export default function Weather(props) {
       wind: Math.round(response.data.wind.speed),
       city: response.data.name,
       description: response.data.weather[0].description,
-      iconUrl: response.data.weather[0].icon,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
@@ -96,9 +95,13 @@ export default function Weather(props) {
               <div className="row px-5">
                 <div className="col-md detail-block text-center">
                   <div className="star-city">{weatherData.city}</div>
-                  <div className="d-block current-emoji">
-                    <WeatherIcon code={weatherData.iconUrl} />
-                  </div>
+                  {/* <WeatherInfo /> */}
+                  <img
+                    src={weatherData.iconUrl}
+                    alt={weatherData.description}
+                    width="220"
+                    className="d-block current-emoji"
+                  />
                 </div>
 
                 <div className="col-md text-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import WxAppReact from "wx-app-react";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
@@ -24,10 +24,10 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <WxAppReact
+    <ReactAnimatedWeather
       icon={codeMapping[props.code]}
-      color="#ffffff"
-      size={props.size}
+      color="black"
+      // size={130}
       animate={true}
     />
   );
