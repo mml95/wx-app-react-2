@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="Footer">
       <footer>
         <a
-          href="https://github.com/mml95/wx-app-react"
+          href="https://github.com/mml95/wx-app-react-2"
           target="_blank"
           rel="noreferrer"
         >
